@@ -48,8 +48,39 @@ nav {
     color: rgb(4, 165, 66)
 }
 
+.navbar a:hover {
+    color: rgb(55, 226, 21);
+}
+
 .navbar ul {
     display: flex;
     gap: 15px;
     margin: 15px;
 }
+
+header img {
+    width: 600px;
+    margin-right: 60px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px
+}
+
+header .intro {
+    margin-left: 40px
+}
+
+.intro button {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgb(227, 231, 10);
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
