@@ -121,16 +121,25 @@ header .intro {
     font-style: italic;
 }
 
+figcaption {
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(24, 192, 38);
+}
+
 .signup {
     background-color: white;
     color: rgb(4, 165, 66);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 60px 300px 60px 300px;
+    /* margin: 60px 300px 60px 300px; */
+    width: 70%;
     padding: 40px;
     border-radius: 30px;
-    
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
