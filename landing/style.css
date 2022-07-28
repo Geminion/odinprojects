@@ -87,6 +87,8 @@ header .intro {
 .info {
     text-align: center;
     background-color: rgb(0, 0, 0);
+    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .info-box img{
@@ -102,5 +104,52 @@ header .intro {
     justify-content: space-between;
     align-items: center;
     margin: 15px;
-    margin-right: 25px;;
+    margin-right: 25px;
+    padding: 50px;
+}
+
+.quote {
+    background-color: yellow;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 100px; */
+    padding: 100px;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.signup {
+    background-color: white;
+    color: rgb(4, 165, 66);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px 300px 60px 300px;
+    padding: 40px;
+    border-radius: 30px;
+    
+}
+
+
+.signup button {
+    background-color: rgb(4, 165, 66);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.signup button:hover {
+    background-color: rgb(51, 196, 106);
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
 }
