@@ -18,57 +18,53 @@
 <body>
 
     <script>
+        let playerCount = 0;
+        let computerCount = 0;
 
+        let getComputerChoice = () => {
             let roShamBo = ["rock", "paper", "scissors"];
+            let random = Math.floor(Math.random() * roShamBo.length);
+            return roShamBo[random];
+        }
 
-            let randomPick = Math.floor(Math.random() * roShamBo.length);
+        let playRound = (playerSelection, computerSelection) => {
 
-            let pick = roShamBo[randomPick]
-
-            let playerWins = 0;
-
-            let computerWins = 0;
-
-
-        // function getComputerChoice randomly returns "Rock", "Paper", or "Scissors". 
-            function computerChoice() {
-                return pick;
-            }
-                
-
-        // function singleRound takes 2 parameters (playerSelection and getComputerChoice)
-        // and returns a string declaring the winner of the round.  The playerSelection is case insensitive.
-        function singleRound (playerSelect, getComputerChoice) {
-            
-            getComputerChoice = computerChoice();
-
-            let playerChoice = prompt("Lets play Rock, Paper, Scissors!  Call it!");
-
-            playerSelect = playerChoice.toLowerCase();
-            
-
-            if (playerSelect == "rock" && getComputerChoice == "scissors") {
-                return "Rock beats Scissors!  You win!"
-            }else if (playerSelect == "paper" && getComputerChoice == "rock") {
-                return "Paper beats Rock!  You win!"
-            }else if (playerSelect == "scissors" && getComputerChoice == "paper") {
-                return "Scissors beats Paper!  You win!"
-            }else if (playerSelect == getComputerChoice) {
+            if (playerSelection === "rock" && computerSelection === "scissors") {
+                playerCount++
+                return "You win!  Computer picked Scissors!" 
+            } else if (playerSelection === "rock" && computerSelection === "paper") {
+                computerCount++
+                return "You lose!  Computer picked Paper!" 
+            } else if (playerSelection === "paper" && computerSelection === "rock") {
+                playerCount++
+                return "You win!  Computer picked Rock!" 
+            } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                computerCount++
+                return "You lose!  Computer picked Scissors!"
+            } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                playerCount++
+                return "You win!  Computer picked Paper!"
+            } else if (playerSelection === "scissors" && computerSelection === "rock") {
+                computerCount++
+                return "You lose!  Computer picked Rock!"
+            } else if (playerSelection === computerSelection) {
                 return "Draw!"
-            }else{
-                return "You lose!"
             }
         }
 
-        // function game has a function inside named playRound that plays a 5 round game, keeps score and reports a winner or 
-        // loser at the end.  
+        let game = () => {
+            for (let i = 0; i < 5; i++) {
+                playerSelection = prompt("Lets play Ro-Sham-Bo!  Call it!").toLowerCase();
+                computerSelection = getComputerChoice();
+                console.log(playRound(playerSelection, computerSelection))
+            }
 
-        function game() {
-            function playRound(){
-                for (let i = 0; i < 5; i++) {
-                    if (playerWins >)
-                }
-
+            if (playerCount > computerCount) {
+                return "You win!  Humanity lives another day!"
+            } else if (computerCount > playerCount){
+                return "You lose!  The computer is alive!"
+            } else {
+                return "Tied!"
             }
         }
 
